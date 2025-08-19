@@ -1,23 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Predict what the next year will be!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Year Predictor</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 120px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-<h2>Guess the next year</h2>
-<input type="number" id="YearInput" placeholder="Enter the current year">
-<button onclick="nextYear()"Predict the next year</button>
-<p id="result"></p>
+    <div class="container">
+        <h2>Guess the Next Year</h2>
+        <input type="number" id="yearInput" placeholder="Enter year">
+        <br>
+        <button onclick="predictNextYear()">Predict Next Year</button>
+        <div class="result" id="result"></div>
+    </div>
 
-<script>
-function nextYear() {
-const year = parseInt(document.getElementById("yearInput").value);
-if (!isNaN(year)) {
-document.getElementById("result").innerText = "Next year prediction is: " + (year + 1);
-} else }
-document.getElemtnById("result").innerText = Please enter a valid year. ";
-}
-}
-</script>
+    <script>
+        function predictNextYear() {
+            const year = parseInt(document.getElementById('yearInput').value);
+            if (!isNaN(year)) {
+                document.getElementById('result').innerText = "Next year is: " + (year + 1);
+            } else {
+                document.getElementById('result').innerText = "Please enter a valid number!";
+            }
+        }
+    </script>
 </body>
 </html>
