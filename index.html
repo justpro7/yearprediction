@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Predict what the next year will be!</title>
+</head>
+<body>
+<h2>Guess the next year</h2>
+<input type="number" id="YearInput" placeholder="Enter the current year">
+<button onclick="nextYear()"Predict the next year</button>
+<p id="result"></p>
+
+<script>
+function nextYear() {
+const year = parseInt(document.getElementById("yearInput").value);
+if (!isNaN(year)) {
+document.getElementById("result").innerText = "Next year prediction is: " + (year + 1);
+} else }
+document.getElemtnById("result").innerText = Please enter a valid year. ";
+}
+}
+</script>
+</body>
+</html>
